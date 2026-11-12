@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Personaliza a tua peça de croché Desalinha: escolhe categoria, cor e envia uma fotografia de inspiração.">
+  <title>Personalização | Desalinha handmade</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="personalizacao.js" defer></script>
+</head>
+<body class="custom-page">
+  <div class="site-shell">
+    <div class="topbar">✦ peças artesanais em croché feitas à mão ✦</div>
+    <header class="site-header">
+      <a class="brand" href="Início.html" aria-label="Desalinha, voltar ao início">
+        <img src="Imagens/logo-desalinha.jpg" alt="Logótipo Desalinha handmade">
+        <span class="brand-text"><strong>Desalinha</strong><span>handmade</span></span>
+      </a>
+      <p class="header-note">Uma ideia tua, feita à mão por nós ♡</p>
+      <a class="text-button" href="produtos.html">Ver produtos ↗</a>
+    </header>
+    <nav class="main-nav" aria-label="Menu principal">
+      <a href="Início.html">Início</a>
+      <a href="Início.html#registo">Registo</a>
+      <a href="produtos.html">Produtos</a>
+      <a href="personalizacao.html" aria-current="page">Personalização</a>
+      <a href="Início.html#promocoes">Promoções</a>
+      <a href="Início.html#sobre">Sobre nós</a>
+      <a href="Início.html#contactos">Contactos</a>
+    </nav>
+    <main class="custom-main">
+      <section class="custom-intro">
+        <span class="section-kicker">DESALINHA HANDMADE · FEITO À TUA MEDIDA</span>
+        <h1>Personaliza a tua <em>peça de croché</em></h1>
+        <p>Conta-nos o que imaginas. Escolhe uma categoria, escolhe uma ou várias cores e envia uma imagem de inspiração para ajudar a explicar a tua ideia.</p>
+      </section>
+      <div class="custom-layout">
+        <section class="custom-form-panel" aria-labelledby="custom-form-title">
+          <span class="section-kicker">A TUA IDEIA</span>
+          <h2 id="custom-form-title">Pedido de personalização</h2>
+          <form id="custom-form">
+            <div class="custom-field">
+              <label for="category">Categoria <span aria-hidden="true">*</span></label>
+              <select id="category" name="categoria" required>
+                <option value="">Seleciona uma categoria</option>
+                <option>Biquínis</option><option>Bebé</option><option>Roupa</option><option>Sapatos</option>
+                <option>Natal</option><option>Decoração</option><option>Plantas</option><option>Acessórios</option>
+              </select>
+            </div>
+            <div class="custom-field">
+              <label for="product-name">Que peça queres personalizar? <span aria-hidden="true">*</span></label>
+              <input id="product-name" name="peca" required maxlength="100" placeholder="Ex.: porta-chaves com uma flor">
+            </div>
+            <fieldset class="custom-field color-fieldset">
+              <legend>Escolhe as cores da tua peça <span aria-hidden="true">*</span></legend>
+              <p class="help-text">Escolhe uma cor no seletor RGB e clica em «Adicionar cor». Repete para combinar quantas cores quiseres.</p>
+              <label class="sub-label" for="custom-color">Selecionar cor (RGB)</label>
+              <div class="color-picker-row">
+                <input type="color" id="custom-color" value="#eab6c4" aria-label="Escolher cor RGB">
+                <span id="color-hex">#EAB6C4</span>
+                <button type="button" class="text-button" id="add-custom-color">+ Adicionar cor</button>
+              </div>
+              <div class="selected-colors-panel">
+                <strong>Cores selecionadas:</strong>
+                <div class="selected-colors" id="selected-colors" aria-live="polite"><span class="help-text">Ainda não escolheste cores.</span></div>
+              </div>
+              <p class="help-text" id="color-error" role="alert" hidden>Seleciona pelo menos uma cor.</p>
+            </fieldset>
+            <div class="custom-field">
+              <label for="details">Detalhes e sugestões</label>
+              <textarea id="details" name="detalhes" rows="5" maxlength="1500" placeholder="Tamanho, padrão, nome, cores secundárias, prazo desejado...
+Conta-nos como imaginas a peça."></textarea>
+            </div>
+            <div class="custom-field">
+              <label for="reference-image">Imagem de sugestão (opcional)</label>
+              <label class="upload-area" for="reference-image"><span class="upload-symbol" aria-hidden="true">＋</span><strong>Escolher fotografia de inspiração</strong><small>JPG, PNG ou WEBP · até 5 MB</small></label>
+              <input class="file-input" id="reference-image" name="imagem" type="file" accept="image/jpeg,image/png,image/webp">
+              <p class="help-text" id="file-status" role="status">Ainda não escolheste nenhuma imagem.</p>
+              <div class="uploaded-preview" id="uploaded-preview" hidden>
+                <img id="uploaded-image" alt="Pré-visualização da imagem de sugestão">
+                <button class="text-button" type="button" id="remove-image">Remover imagem</button>
+              </div>
+            </div>
+            <div class="custom-field">
+              <label for="contact-name">O teu nome (opcional)</label>
+              <input id="contact-name" name="nome" autocomplete="name" placeholder="Como te podemos tratar?">
+            </div>
+            <div class="form-actions">
+              <button class="button button-primary" type="submit">Enviar pedido ↗</button>
+              <button class="text-button" type="reset">Limpar formulário</button>
+            </div>
+            
+          </form>
+        </section>
+        <aside class="custom-side">
+          <div class="inspiration-card">
+            <img src="Imagens/catos-croche.jpg" alt="Exemplo de catos em croché feitos à mão">
+            <div class="inspiration-copy"><span class="section-kicker">INSPIRAÇÃO</span><h2>Uma peça só tua</h2><p>Usa uma imagem de exemplo ou descreve a tua ideia. Vamos transformá-la num pedido que possas partilhar connosco.</p></div>
+          </div>
+          <div class="steps-card">
+            <h3>Como funciona?</h3>
+            <ol>
+              <li>Seleciona uma das oito categorias.</li>
+              <li>Escolhe uma ou várias cores e descreve a tua peça.</li>
+              <li>Adiciona uma foto de referência, se quiseres.</li>
+              <li>Prepara o e-mail e anexa a foto antes de enviar.</li>
+            </ol>
+            <p>O preço de peças personalizadas será confirmado após análise do pedido.</p>
+          </div>
+        </aside>
+      </div>
+    </main>
+    <footer id="contactos">
+      <div><strong>DESALINHA</strong><small>Feito à mão em Portugal © <span id="year"></span></small></div>
+      <div class="footer-links"><a href="Início.html">Início</a><a href="produtos.html">Produtos</a><a href="mailto:ola@exemplo.pt">Contactos</a></div>
+    </footer>
+  </div>
+</body>
+</html>

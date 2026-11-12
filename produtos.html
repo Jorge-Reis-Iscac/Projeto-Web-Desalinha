@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Desalinha: peças de croché feitas à mão. Descobre biquínis, bebé, sapatos, natal, decoração, plantas e acessórios.">
+  <title>Produtos | Desalinha handmade</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body class="catalog-page">
+  <div class="site-shell" id="inicio">
+    <div class="topbar">✦ peças artesanais em croché feitas à mão ✦</div>
+
+    <header class="site-header">
+      <a class="brand" href="#inicio" aria-label="Desalinha, voltar ao início">
+        <img src="Imagens/logo-desalinha.jpg" alt="Logótipo Desalinha handmade">
+        <div class="brand-text">
+          <strong>Desalinha</strong>
+          <span>handmade</span>
+        </div>
+      </a>
+
+      <div class="search-wrap">
+        <label class="sr-only" for="search">Pesquisar produtos</label>
+        <input id="search" type="search" placeholder="Pesquisar produtos..." autocomplete="off">
+        <span aria-hidden="true">⌕</span>
+      </div>
+
+      <div class="header-actions">
+        <button class="icon-button" id="favorites-button" type="button" aria-label="Ver favoritos" title="Ver favoritos">♡ <span id="favorites-count">0</span></button>
+        <button class="icon-button" id="cart-button" type="button" aria-label="Abrir carrinho" title="Abrir carrinho">🛒 <span id="cart-count">0</span></button>
+      </div>
+    </header>
+
+    <nav class="main-nav" aria-label="Menu principal">
+      <a href="Início.html#inicio">Início</a>
+      <a href="Início.html#registo">Registo</a>
+      <a href="produtos.html" aria-current="page">Produtos</a>
+      <a href="personalizacao.html">Personalização</a>
+      <a href="Início.html#promocoes">Promoções</a>
+      <a href="Início.html#sobre">Sobre nós</a>
+      <a href="Início.html#contactos">Contactos</a>
+    </nav>
+
+    <main class="catalog-main">
+      <section class="catalog-intro">
+        <div>
+          <span class="section-kicker">DESALINHA HANDMADE · COLEÇÃO</span>
+          <h1>Os nossos produtos</h1>
+          <p>Peças artesanais em croché, feitas com carinho. Explora as categorias ou pesquisa o teu favorito.</p>
+        </div>
+        <img src="Imagens/logo-desalinha.jpg" alt="Símbolo da marca Desalinha handmade">
+      </section>
+
+      <section class="catalog-section" id="categorias">
+        <div class="section-heading">
+          <div><span class="section-kicker">EXPLORA A COLEÇÃO</span><h2>Categorias</h2></div>
+          <p>Seleciona uma categoria para filtrar os produtos</p>
+        </div>
+        <div class="categories">
+          <button class="category-card" type="button" data-category="biquinis"><span class="category-art">👙</span><span>Biquínis</span></button>
+          <button class="category-card" type="button" data-category="bebe"><span class="category-art">🧸</span><span>Bebé</span></button>
+          <button class="category-card" type="button" data-category="roupa"><span class="category-art">👗</span><span>Roupa</span></button>
+          <button class="category-card" type="button" data-category="sapatos"><span class="category-art">👟</span><span>Sapatos</span></button>
+          <button class="category-card" type="button" data-category="natal"><span class="category-art">🎄</span><span>Natal</span></button>
+          <button class="category-card" type="button" data-category="decoracao"><span class="category-art">🏡</span><span>Decoração</span></button>
+          <button class="category-card" type="button" data-category="plantas"><span class="category-art">🪴</span><span>Plantas</span></button>
+          <button class="category-card" type="button" data-category="acessorios"><span class="category-art">👜</span><span>Acessórios</span></button>
+        </div>
+      </section>
+
+      <section class="catalog-section products-section" id="produtos">
+        <div class="section-heading">
+          <div><span class="section-kicker">FEITO À MÃO</span><h2>Produtos em destaque</h2></div>
+          <button id="show-all" class="text-button" type="button">Mostrar todos ↗</button>
+        </div>
+        <div class="products" id="product-grid" aria-live="polite"></div>
+        <p id="empty-message" class="empty-message" hidden>Ainda não existem produtos nesta categoria. Escolhe outra ou mostra todos os produtos.</p>
+      </section>
+    </main>
+    <footer id="contactos">
+      <div><strong>DESALINHA</strong><small>Feito à mão em Portugal © <span id="year"></span></small></div>
+      <div class="footer-links"><a href="Início.html">Início</a><a href="mailto:ola@exemplo.pt">E-mail</a><a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">Instagram ↗</a></div>
+    </footer>
+  </div>
+
+  <div class="overlay" id="overlay" hidden></div>
+  <aside class="drawer" id="cart-drawer" role="dialog" aria-modal="true" aria-labelledby="drawer-title" aria-hidden="true">
+    <div class="drawer-top"><h2 id="drawer-title">O meu carrinho 🧺</h2><button type="button" class="close-button" id="close-cart" aria-label="Fechar carrinho">×</button></div>
+    <div id="cart-items" class="cart-items"></div>
+    <div class="drawer-bottom"><div class="cart-total"><span>Total</span><strong id="cart-total">0,00 €</strong></div><a id="checkout-link" class="button button-primary checkout-button" href="mailto:ola@exemplo.pt">Pedir por e-mail ↗</a><small>Loja de demonstração. Altera o e-mail e os contactos antes de publicar.</small></div>
+  </aside>
+</body>
+</html>
